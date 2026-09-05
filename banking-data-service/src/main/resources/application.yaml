@@ -1,3 +1,14 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: banking-data-service
+  threads:
+    virtual:
+      enabled: true
+
+
+simulated-latency:
+  min-seconds: 1
+  max-seconds: 5
