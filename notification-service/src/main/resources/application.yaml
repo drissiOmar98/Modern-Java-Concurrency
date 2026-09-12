@@ -1,3 +1,14 @@
+server:
+  port: 8084
+
 spring:
   application:
     name: notification-service
+  threads:
+    virtual:
+      enabled: true
+
+notification-channel:
+  min-seconds: 1
+  max-seconds: 3
+  failure-rate-percent: 25
