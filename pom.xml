@@ -35,6 +35,7 @@
     <modules>
         <module>loan-origination-service</module>
         <module>banking-data-service</module>
+        <module>notification-service</module>
     </modules>
 
     <properties>
