@@ -1,3 +1,15 @@
+server:
+  port: 8083
+
 spring:
   application:
     name: fraud-check-service
+  threads:
+    virtual:
+      enabled: true
+
+# Bound to com.balarawool.loomdemo.fraudcheck.config.RiskCheckProperties
+risk-check:
+  min-seconds: 1
+  max-seconds: 4
+  slow-check-chance-percent: 20
