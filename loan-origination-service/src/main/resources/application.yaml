@@ -10,3 +10,11 @@ spring:
 
 banking-data-service:
   base-url: http://localhost:8081
+
+fraud-check-service:
+  base-url: http://localhost:8083
+  deadline-millis: 3000
+
+notification-service:
+  base-url: http://localhost:8084
+
