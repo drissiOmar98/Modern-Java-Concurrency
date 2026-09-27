@@ -27,4 +27,34 @@ public class RestClientConfig {
                                                     BankingDataServiceProperties properties) {
         return restClientBuilder.baseUrl(properties.baseUrl()).build();
     }
+
+    /**
+     * Creates the {@link RestClient} used by {@code RiskAssessmentService}
+     * to call fraud-check-service.
+     *
+     * @param restClientBuilder Spring Boot's auto-configured builder
+     * @param properties        the downstream service connection settings
+     * @return a {@link RestClient} bound to fraud-check-service
+     */
+    @Bean
+    public RestClient fraudCheckServiceRestClient(RestClient.Builder restClientBuilder,
+                                                  FraudCheckServiceProperties properties) {
+        return restClientBuilder.baseUrl(properties.baseUrl()).build();
+    }
+
+
+    /**
+     * Creates the {@link RestClient} used by {@code NotificationService} to
+     * call notification-service.
+     *
+     * @param restClientBuilder Spring Boot's auto-configured builder
+     * @param properties        the downstream service connection settings
+     * @return a {@link RestClient} bound to notification-service
+     */
+    @Bean
+    public RestClient notificationServiceRestClient(RestClient.Builder restClientBuilder,
+                                                    NotificationServiceProperties properties) {
+        return restClientBuilder.baseUrl(properties.baseUrl()).build();
+    }
+
 }
